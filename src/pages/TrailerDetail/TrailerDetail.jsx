@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTrailerDetail } from "../../hooks/data/useTrailerDetail.js";
 import LoadingState from "../../components/Common/LoadingState.jsx";
 import ErrorState from "../../components/Common/ErrorState.jsx";
-import TrailerVideo from "./trailerVideo.jsx";
+import TrailerVideo from "./TrailerVideo.jsx";
 import YouMightAlsoLike from "./YouMightAlsoLike.jsx";
 import TrailerImages from "./TrailerImages.jsx";
 import TrailerComments from "./TrailerComments.jsx";
