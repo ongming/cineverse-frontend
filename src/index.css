@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  /* 1. Định nghĩa Tên Màu Thương Hiệu dùng chung toàn bộ dự án */
+  --color-gold: #ffb800;
+  --color-gold-hover: #f5c518;
+  --color-cyan-neon: #00e5e5;
+  --color-dark-bg: #080808;
+  --color-card-bg: #12141a;
+  --color-dark-panel: #121212;
+
+  /* 2. Định nghĩa Mốc Màn Hình tùy chỉnh */
+  --breakpoint-1400: 1400px;
+
+  /* 3. Định nghĩa Phông Chữ dùng chung - TOÀN BỘ TRANG DÙNG MONO */
+  --font-sans: "Roboto Mono", monospace;
+  --font-mono: "Roboto Mono", monospace;
+}
+
+@layer base {
+  /* 4. Định nghĩa Màu Chữ & Màu Nền mặc định cho toàn bộ thẻ <body> */
+  body {
+    @apply bg-dark-bg text-white font-mono antialiased min-h-screen selection:bg-cyan-neon selection:text-black;
+    font-family: var(--font-mono) !important;
+  }
+
+  * {
+    font-family: var(--font-mono);
+  }
+
+  /* Định nghĩa kiểu đường cuộn đẹp mắt (Scrollbar) toàn trang */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080808;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #222222;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00e5e5;
+  }
+
+  /* Custom category visible scrollbar for mobile */
+  .custom-category-scrollbar::-webkit-scrollbar {
+    width: 6px !important;
+    display: block !important;
+  }
+  .custom-category-scrollbar::-webkit-scrollbar-track {
+    background: #181a24 !important;
+    border-radius: 4px;
+  }
+  .custom-category-scrollbar::-webkit-scrollbar-thumb {
+    background: #fbbf24 !important;
+    border-radius: 4px;
+  }
+  .custom-category-scrollbar {
+    scrollbar-width: thin !important;
+    scrollbar-color: #fbbf24 #181a24 !important;
+  }
+
+  /* Custom horizontal table visible scrollbar */
+  .custom-horizontal-scrollbar::-webkit-scrollbar {
+    height: 6px !important;
+    display: block !important;
+  }
+  .custom-horizontal-scrollbar::-webkit-scrollbar-track {
+    background: #181a24 !important;
+    border-radius: 4px;
+  }
+  .custom-horizontal-scrollbar::-webkit-scrollbar-thumb {
+    background: #00e5e5 !important;
+    border-radius: 4px;
+  }
+  .custom-horizontal-scrollbar {
+    scrollbar-width: thin !important;
+    scrollbar-color: #00e5e5 #181a24 !important;
+  }
+}
